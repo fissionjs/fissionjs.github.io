@@ -1,6 +1,5 @@
 .button {
   transition: all 0.5s;
-  width: 140px;
   padding: 15px;
   border-radius: 3px;
 }
@@ -9,8 +8,8 @@
   color: #fff;
 }
 .button.blue {
-  background: rgba(200,200,200,0.2);
-  border: 2px solid rgba(36,127,188,0.6);
+  background: rgba(200,200,200,0);
+  border: 3px solid rgba(36,127,188,0.6);
   color: accent;
 }
 .button.blue:hover {
@@ -19,4 +18,8 @@
 }
 .button.center {
   display: inline-block;
+}
+.button.large {
+  font-size: 20px;
+  font-weight: bold;
 }
