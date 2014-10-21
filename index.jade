@@ -2,7 +2,62 @@ doctype html
 html
   head
     title Fission
-    link(rel="stylesheet" type="text/css" href="public/css/main.css")
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='stylesheet' type='text/css' href='public/css/main.css')
   body
-    .wrapper
-      h1 Fission
+    #wrapper.wrapper
+      #menu.menu
+        //-.left
+          img(src='public/images/logo.svg')
+        .left
+          a(href='/') FISSION.JS
+        li
+          a(href='https://github.com/fissionjs/fission') CODE
+        li
+          a(href='https://github.com/fissionjs/fission/tree/master/docs') DOCS
+        //li
+          a(href='https://github.com/fissionjs') GUIDES
+        li
+          a(href='https://www.npmjs.org/browse/keyword/fission-plugin') PLUGINS
+        .right
+          a(href='https://github.com/fissionjs/fission' target='_blank') GITHUB
+      .content
+        .logo
+          img(src='public/images/logo.svg')
+          .text FISSION.JS
+          .sub The Reactjs Toolkit
+        #down.down ‹
+        .spacer
+        .items
+          .item
+            h3 Easy to use
+            p.
+              Fission lets you focus on the app, not worry about designing the core system behind it.
+          .item
+            h3 Efficient
+            p.
+              Fission uses React for extremely efficient rendering, with the best parts of Ampersandjs, model and state.
+          br
+          br
+          .item
+            h3 Customizable API
+            p.
+              Fully modifiable API enables swapping out of core elements, such as Sync, for a mulit-service application
+          .item
+            h3 Open Source
+            p.
+              Fission is, and will always be Fully Open Source.
+
+        a.button.blue.center(href='https://github.com/fissionjs/fission') Get Started!
+        .spacer
+
+
+
+
+      #footer.footer
+        img(src='public/images/fractal.png')
+        .title Made by
+          a(href='http://wearefractal.com')  Fractal
+      .spacer
+
+      script(src='public/js/main.js')

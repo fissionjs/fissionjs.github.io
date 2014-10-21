@@ -1,0 +1,151 @@
+@import './imports/reset'
+accent = rgba(36, 127, 188, 1)
+
+body
+  background: rgba(250, 250, 250, 1)
+  font-size: 1em
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+  color: rgba(120, 120, 120, 1)
+
+a
+  transition: color .5s
+  text-decoration: none
+  color: accent
+  &:hover
+    color: accent
+
+@import './imports/buttons'
+
+
+.active
+  color: accent
+.spacer
+  height: 100px
+
+.wrapper
+  width: 100%
+  text-align: center
+  transition: all 1s
+
+  .menu
+    transition: all .5s
+    width: 100%
+    height 75px
+    position: fixed
+    top: 100px
+    left: 0
+    right: 0
+    display: inline-block
+    padding-top: 20px
+    overflow: hidden
+    .left, .right
+      transition: all .5s
+      position: absolute
+      top: 100px
+      height: 75px
+      padding-top: 25px
+      font-size: 20px
+    .left
+      left: 50px
+      img
+        height: 40px
+    .right
+      right: 50px
+    li
+      transition: all .5s
+      display: inline-block
+      padding: 10px
+      &.active, &:hover
+        @extend .active
+    a
+      color: rgba(180, 180, 180, 1)
+      &:hover
+        color: accent
+    &.scrolled
+      position: fixed
+      top: 0px
+      background: rgba(250, 250, 250, .95)
+      & .left
+        top: 0px
+      & .right
+        top: 0px
+
+  .content
+    margin-top: 100px
+    text-align: center
+    .logo
+      width: 25%
+      min-width: 300px
+      height: 250px
+      margin-top: 140px
+      display: inline-block
+      font-size: 45px
+      color: rgba(120, 120, 120, 1)
+      img
+        width: 180px
+      .text
+        margin-top: 50px
+      .sub
+        margin-top: 10px
+        font-size: 20px
+    .down
+      transition: all .5s
+      height: 50px
+      width: 50px
+      margin: 20vh auto
+      background: rgba(150, 150, 150, .25)
+      border-radius: 25px
+      padding: 5px
+      font-size: 30px
+      transform: rotate(-90deg)
+      color: rgba(100, 100, 100, 1)
+      cursor: pointer
+      &:hover
+        color: #fff
+        background: accent
+
+    .items
+      width: 60%
+      margin-left: 20%
+      text-align: center
+      .item
+        display: inline-block
+        vertical-align: top
+        width: 50%
+        max-width: 300px
+        height 250px
+        padding: 10px
+        text-align: left
+
+
+
+
+
+.footer
+  height: 500px
+  border-top: 1px solid rgba(100, 100, 100, .1)
+  padding-top: 200px
+  .title
+    font-size: 30px
+  img
+    width: 150px
+
+
+
+
+
+
+@media (max-width: 700px)
+  .wrapper
+    .menu
+      height: 125px
+      &.scrolled
+        .left, .right
+          top: 50px !important
+    .content
+      .items
+        width: 100%
+        margin-left: 0
+        .item
+          width: 90%
+          margin-left: 5%
